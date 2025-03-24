@@ -8,7 +8,7 @@ body {
         font-family: "Zen Maru Gothic", serif;
         font-weight: 400;
         font-style: normal;
-        line-height: 1;
+        line-height: 1.5;
         color: #020202;
         background-color: #66abb2;
 }
@@ -27,8 +27,8 @@ img {
 .main-nav {
     display: flex;
     font-size: 1rem;
-    text-transform: uppercase;
-    margin-top: 40px;
+    text-transform: capitalize;
+    margin-top: 20px;
     list-style: none;
 }
 
@@ -57,7 +57,74 @@ img {
     background-color: #66abb2;
 }
 
+/* ハンバーガーメニュー */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* ヘッダー固定 */
+body {
+  padding-top: 0px; /* ヘッダーの後ろに要素が隠れないようにするため */
+}
+
+header {
+  width: 100%; /* 幅いっぱいを指定 */
+  height: 100px; /* 高さを50pxに指定 */
+  background: #66abb2; /* 背景色指定 */
+  padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+  position: sticky; /* ウィンドウを基準に画面に固定 */
+  z-index: 999;
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 80px; /* 左右の固定位置を左から0pxにする */
+  display: flex; /* 中の要素を横並びにする */
+  align-items: center; /* 中の要素を上下中央に並べる */
+}
+
+main {
+  height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+}
+
 /* HOME -------------------*/
+
+/* フロートボタン */
+.fixed_btn { 
+  position: fixed;
+  bottom: 10px;
+  right: 90px;
+  background: #ffffff;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #f38f3d;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: .1rem;
+  transition: .5s;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  font-size: 20px;
+  border: 2px solid #f38f3d;
+  z-index: 999;
+}
+
+.fixed_btn:hover {
+  background: #f38f3d;
+  color: #ffffff;
+  border: 1px solid #f38f3d;
+}
+
 .home-content {
     background-color: #66abb2;
     text-align: center;
@@ -68,9 +135,13 @@ img {
     margin: 1.5rem 0;
     border-radius: 10px;
 }
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
 
 .title {
     font-size: 2.5rem;
+    padding-top: 32px;
 }
 .big-p {
     font-size: 1.5rem;
@@ -86,7 +157,7 @@ section {
 .button {
     display: block;
     background: #66abb2;
-    width: 20rem;
+    width: 15rem;
     padding: 1rem;
     border-radius: 10rem;
     color: #FFF;
@@ -95,6 +166,8 @@ section {
     letter-spacing: .1rem;
     transition: .5s;
     margin: auto;
+    margin-top: 40px;
+    margin-bottom: 32px;
   }
   
   .button:hover {
@@ -106,25 +179,29 @@ section {
 .grid {
     display: grid;
     gap: 40px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     margin-top: 4%;
     margin-bottom: 48px;
+}
+
+.grid2 {
+  display: grid;
+  gap: 120px;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  margin-top: 4%;
+  margin-bottom: 48px;
 }
 
 img {
     border-radius: 10px;
 }
 
-.grid2 {
-    display: grid;
-    gap: 120px;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 4%;
-    margin-bottom: 48px;
+.miyama-title {
+  font-size: 40px;
+  padding-top: 32px;
 }
-
 .miyama {
-    width: 200px;
+    width: 340px;
 }
 
 .portfolio {
@@ -137,10 +214,10 @@ img {
     position: relative;
     display: inline-block;
     width: 200px;
-    height: 100px;
+    height: 200px;
     border-radius: 50%;
     background: #66abb2;
-    margin: 1%;
+    margin: 2%;
     color: #ffffff;
   }
   
@@ -175,7 +252,7 @@ img {
     margin-bottom: 4%;
   }
   .flex .image {
-    width: 600px; /*画像サイズ指定*/
+    width: 600px;/*画像サイズ指定*/
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -218,15 +295,164 @@ img {
   .box3 {
     padding: 0.5em 1em;
     margin: 1em 0;
-    color: #ffffff;
-    background: #66abb2;/*背景色*/
+    color: #66abb2;
+    border: 2px solid #66abb2;
     border-radius: 10px;
-}
-.box3 p {
-    margin: 0; 
-    padding: 0;
-}
+  }
+  .box3 p {
+      margin: 0; 
+      padding: 0;
+  }
 
   .bg-gr span {
     font-size: 32px;
   }
+
+  .hr1 {
+    border-top: 1px dashed #66abb2; /* 破線 */
+    margin-bottom: 32px;
+  }
+
+  .feature5 {
+    width: 360px;
+  }
+
+  .box {
+    padding: 10px;
+    margin: 1em 0;
+    background: #ffffff;/*背景色*/
+    border: 1px solid #f38f3d;
+    border-radius: 10px;
+  }
+  .box p {
+      margin: 0; 
+      padding: 0;
+  }
+
+  figure {
+    border-radius: 10px;
+}
+
+/* モバイル版 */
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+  }
+  .big-p {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+  
+  /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+  .pc { 
+    display: none !important; 
+  }
+  .sp { 
+    display: block !important; 
+    margin: auto;
+  }
+
+
+  /* Flexbox */
+  .flex .image {
+    width: 360px;
+  }
+
+  .flex .right {
+    width: 400px;
+  }
+  
+  .flex .left {
+    width: 400px;
+  }
+
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .flex .right {
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+  
+  .flex .left {
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+    margin: 16px, 0;
+  }
+
+  /* flexの並び */
+  .order1 {
+    order: 1;
+  }
+  .order2 {
+    order: 2;
+
+  }
+  .order3 {
+    order: 3;
+  }
+  .order4 {
+    order: 4;
+  }
+  .order5 {
+    order: 5;
+  }
+  .order6 {
+    order: 6;
+  }
+  .order7 {
+    order: 7;
+  }
+  .order8 {
+    order: 8;
+  }
+
+  .kome {
+    display: none;
+  }
+
+  /* フロートボタンの位置 */
+  .fixed_btn { 
+    bottom: 5px;
+    right: 10px;
+  }
+
+  /* HEADER */
+
+  .main-nav {
+    font-size: 1rem;
+    margin-top: 10px;
+    background-color: #66abb2;
+  }
+  .main-nav li {
+    margin: 0 20px;
+  }
+
+  /* ハンバーガーメニュー */
+.main-nav {
+  display: none;
+  flex-direction: column;
+}
+
+.menu-icon {
+  display: flex;
+  margin-top: 28px;
+}
+
+.active {
+  display: flex;
+}
+
+
+}
