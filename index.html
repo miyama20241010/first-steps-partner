@@ -14,7 +14,7 @@
         <!-- jQuery本体パス指定 -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!-- 制作用jsファイル指定 -->
-        <script src="script.js"></script>
+        <script src="jQuery/script.js"></script>
         <!-- メディアクエリ -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,8 +24,14 @@
         <header class="page-header wrapper">
             <h1 class="main-title"><a href="index.html">First Steps Partner</a></h1>
             <nav>
-                <ul class="main-nav">
-                    <li><a href="feature.html">特徴</a></li>
+                <div class="menu-icon" id="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- /.menu-icon -->
+
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="feature.html">First Steps Partnerの特徴</a></li>
                     <li><a href="service.html">サービス</a></li>
                     <li><a href="flow.html">制作のながれ</a></li>
                     <li><a href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
@@ -34,7 +40,9 @@
         </header>
 
         <div class="home-content wrapper">
-            <img class="main-vs" src="images/main-vs.png" alt="メインビジュアル">
+            <img class="main-vs pc" src="images/main-vs.png" alt="メインビジュアル">
+            <img class="main-vs sp" src="images/mobile-vs.png" alt="モバイルメインビジュアル">
+            <button class="fixed_btn" onclick="window.open('https://miyama10920.com/contact/!')" target="_blank" rel="noopener noreferrer">お問い合わせ</button>
             <section class="no1 wrapper big-bg">
                 <p class="title">First Steps Partner</p>
                 <p class="big-p">「新しいことに挑戦する人の力になりたい」</p>
@@ -56,10 +64,10 @@
                         <img src="images/no21.png" alt="WEBサイト構築">
                     </div>
                     <div class="item">
-                        <img src="images/no22.png" alt="WEBサイト構築">
+                        <img src="images/no22.png" alt="WEBサイトデザイン">
                     </div>
                     <div class="item">
-                        <img src="images/no23.png" alt="WEBサイト構築">
+                        <img src="images/no23.png" alt="WEBサイト画像制作">
                     </div>
                 </div><!-- /.grid -->
 
@@ -69,16 +77,20 @@
             </section><!-- /.no2 -->
 
             <section class="no3 wrapper">
-                <div class="wrapper grid2">
+                <div class="wrapper grid">
                     <div class="item">
                         <p class="title">制作のながれ</p>
                         <img src="images/no31.png" alt="制作のながれ">
                         <a class="button" href="flow.html">詳しくみる</a>
+                    </div><div class="item">
+                        <p class="title kome">*</p>
+                        <img src="images/no33.png" alt="ロゴ">
+                        <a class="button" href="feature.html">特徴をみる</a>
                     </div>
                     <div class="item">
                         <p class="title">お問い合わせ</p>
                         <img src="images/no32.png" alt="お問い合わせ">
-                        <a class="button" href="contact.html">お問い合わせ</a>
+                        <a class="button" href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
                     </div>
                 </div><!-- /.grid2 -->
                 <br>
@@ -86,17 +98,17 @@
             </section><!-- /.no3 -->
 
             <section class="no4 wrapper">
-                <p class="big-p">miyama</p>
+                <p class="big-p miyama-title">miyama</p>
                 <img class="miyama" src="images/no 41.png" alt="miyama">
                 <p>Portfolio ▼</p>
-                <a href="https://miyama10920.com/">
+                <a href="https://miyama10920.com/" target="_blank" rel="noopener noreferrer">
                     <img class="portfolio" src="images/no42.png" alt="ポートフォリオ">
                 </a>
                 
-                    <p>仕事・子育てと忙しい中でも</p>
-                    <p>”自分のために新しい挑戦がしたい”という一心で</p>
+                    <p>仕事・子育てと忙しい中でも、”自分のために新しい挑戦がしたい”という一心で</p>
                     <p>未経験からWEBデザインを学んだ経験があるからこそ</p>
-                    <p>力添えできることがあると思っています。</p> <div class="flex">
+                    <p>力添えできることがあると思っています。</p> 
+                    <div class="flex">
                         <div class="circle">
                             <span>初心者にもわかりやすい<br>言葉で伝える</span>
                         </div>
@@ -107,8 +119,8 @@
                             <span>言語化できない言葉を<br>カタチにする</span>
                         </div>
                     </div><!-- /.flex -->
-                    <p class="big-p">ぜひ、一度ご連絡ください</p>
-                    <a class="button" href="contact.html">お問い合わせする</a>
+                    <p class="big-p">ご連絡を心よりお待ちしております！</p>
+                    <a class="button" href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせする</a>
                     <br>
                 
 
