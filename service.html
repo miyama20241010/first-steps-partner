@@ -14,7 +14,7 @@
         <!-- jQuery本体パス指定 -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!-- 制作用jsファイル指定 -->
-        <script src="script.js"></script>
+        <script src="jQuery/script.js"></script>
         <!-- メディアクエリ -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,16 +24,23 @@
         <header class="page-header wrapper">
             <h1 class="main-title"><a href="index.html">First Steps Partner</a></h1>
             <nav>
-                <ul class="main-nav">
-                    <li><a href="feature.html">特徴</a></li>
+                <div class="menu-icon" id="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- /.menu-icon -->
+
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="feature.html">First Steps Partnerの特徴</a></li>
                     <li><a href="service.html">サービス</a></li>
                     <li><a href="flow.html">制作のながれ</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="home-content wrapper">
+            <button class="fixed_btn" onclick="window.open('https://miyama10920.com/contact/!')" target="_blank" rel="noopener noreferrer">お問い合わせ</button>
             <section class="no1 wrapper">
                 <p class="title">WEBデザインだからできること</p>
                 <p>ご提供できるサービス・価格等をご紹介いたします。</p>
@@ -44,7 +51,7 @@
                             <p class="big-p">WEBサイトデザイン</p>
                             <p>ランディングページやホームページ等の</p>
                             <p>デザインをご提供いたします。</p>
-                            <p>使用ツール：Figuma</p>
+                            <p>使用ツール：Figma</p>
                             <p>使用ツール：10営業日〜</p>
                             <div class="box3">
                                 <p class="bg-gr"><span>¥50,000</span>(税別)〜</p>
@@ -59,7 +66,7 @@
                         <div class="left order4">
                             <p class="big-p">WEBサイト構築</p>
                             <p>デザインから実装までまるっとお任せください。</p>
-                            <p>使用ツール：Figuma・WIX・WordPress・HTML/CSS/jQuery</p>
+                            <p>使用ツール：Figma・WIX・WordPress・HTML/CSS/jQuery</p>
                             <p>使用ツール：20営業日〜</p>
                             <div class="box3">
                                 <p class="bg-gr"><span>¥100,000</span>(税別)〜</p>
@@ -100,9 +107,10 @@
                         <figure class="image order7"><img src="images/service4.png" alt=""></figure>
                     </div><!-- /.flex menu4 -->
                 </section><!-- /.container4 -->
+                <hr class="hr1">
                 <p>個人で行なっているサービスのため、皆様のご要望に応じて</p>
                 <p>上記内容以外にも柔軟に対応させていただきます。</p>
-                <a class="button" href="contact.html">お問い合わせする</a>
+                <a class="button" href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせする</a>
                 <br>
             </section><!-- /.no1 -->
 
