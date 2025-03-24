@@ -14,7 +14,7 @@
         <!-- jQuery本体パス指定 -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!-- 制作用jsファイル指定 -->
-        <script src="script.js"></script>
+        <script src="jQuery/script.js"></script>
         <!-- メディアクエリ -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,16 +24,23 @@
         <header class="page-header wrapper">
             <h1 class="main-title"><a href="index.html">First Steps Partner</a></h1>
             <nav>
-                <ul class="main-nav">
-                    <li><a href="feature.html">特徴</a></li>
+                <div class="menu-icon" id="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- /.menu-icon -->
+
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="feature.html">First Steps Partnerの特徴</a></li>
                     <li><a href="service.html">サービス</a></li>
                     <li><a href="flow.html">制作のながれ</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="home-content wrapper">
+            <button class="fixed_btn" onclick="window.open('https://miyama10920.com/contact/!')" target="_blank" rel="noopener noreferrer">お問い合わせ</button>
             <section class="no1 wrapper">
                 <p class="title">First Steps Partnerだからできること</p>
                 <p>新しいことをはじめる時、誰かにお願いしたらいいかわからないことありませんか？</p>
@@ -71,13 +78,18 @@
                         <p>次回制作時に5%割引させていただきます。</p>
                     </div>
                 </div><!-- /.grid2 -->
+                <hr class="hr1">
                 <p>First Steps Partnerは、</p>
                 <p>「新しいことに挑戦する人の力になりたい」という気持ちで運営しております。</p>
                 <p>上記以外でも力になれることはなんでもご相談ください！</p>
-                <a class="button" href="contact.html">お問い合わせする</a>
+                <img class="feature5" src="images/feature5.png" alt="feature5">
+                <div class="box">
+                    <p>例：Google Sheets等を使用した資料制作／年賀状等のはがき制作代行etc</p>
+                </div><!-- /.box -->
+                <a class="button" href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせする</a>
                 <br>
             </section><!-- /.no1 -->
-
+                
             
         </div><!-- /.home-content -->
 
