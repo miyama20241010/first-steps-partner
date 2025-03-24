@@ -14,7 +14,7 @@
         <!-- jQuery本体パス指定 -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <!-- 制作用jsファイル指定 -->
-        <script src="script.js"></script>
+        <script src="jQuery/script.js"></script>
         <!-- メディアクエリ -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,13 +22,20 @@
 
     <body>
         <header class="page-header wrapper">
+            <button class="fixed_btn" onclick="window.open('https://miyama10920.com/contact/!')" target="_blank" rel="noopener noreferrer">お問い合わせ</button>
             <h1 class="main-title"><a href="index.html">First Steps Partner</a></h1>
             <nav>
-                <ul class="main-nav">
-                    <li><a href="feature.html">特徴</a></li>
+                <div class="menu-icon" id="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- /.menu-icon -->
+
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="feature.html">First Steps Partnerの特徴</a></li>
                     <li><a href="service.html">サービス</a></li>
                     <li><a href="flow.html">制作のながれ</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,6 +44,7 @@
             <section class="no1 wrapper">
                 <p class="title">制作のながれ</p>
                 <p>ここでは、簡単な制作の流れをご紹介いたします。</p>
+                <hr class="hr1">
                 <p class="big-p">step1　ご契約まで（費用はかかりません！）</p>
                 <div class="wrapper grid">
                     <div class="item">
@@ -52,7 +60,7 @@
                         <img src="images/flow3.png" alt="WEBサイト構築">
                     </div>
                 </div><!-- /.grid -->
-
+                <hr class="hr1">
                 <p class="big-p">step2　WEB制作</p>
                 <div class="wrapper grid">
                     <div class="item">
@@ -68,9 +76,11 @@
                         <img src="images/flow6.png" alt="WEBサイト構築">
                     </div>
                 </div><!-- /.grid -->
+                <hr class="hr1">
                 <p>zoomやチャット機能を使用し、コミュニケーションをとりながら</p>
                 <p>制作させていただきます。</p>
-                <a class="button" href="contact.html">お問い合わせする</a>
+                <img class="feature5" src="images/flow7.png" alt="feature5">
+                <a class="button" href="https://miyama10920.com/contact/" target="_blank" rel="noopener noreferrer">お問い合わせする</a>
                 <br>
             </section><!-- /.no1 -->
 
